@@ -358,7 +358,12 @@ Select an emoji
     function initMap()
 	{	
         var home = new google.maps.LatLng(51.4520379130201, 0.0021386373239673092);	
-		old_position = home;
+		old_position = new google.maps.Marker(
+		{
+		  position: home, 
+		  map: zombie_map,
+		  icon: 'player.png'
+		});
 		
 		zombie_map = new google.maps.Map(document.getElementById('zombie_map'), {
 				zoom: 10,
